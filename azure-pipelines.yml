@@ -5,6 +5,11 @@
 
 trigger:
 - master
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '**/*.apk'
+    apksign: false
+    zipalign: false
 
 pool:
   vmImage: 'ubuntu-latest'
